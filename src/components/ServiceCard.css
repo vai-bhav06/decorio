@@ -1,0 +1,104 @@
+.service-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.4s;
+    cursor:pointer;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.service-image{
+    height:220px;
+    overflow:hidden;
+    position:relative;
+}
+
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.service-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Gradient */
+
+.service-image::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:120px;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.55),
+    transparent);
+}
+
+.service-info{
+    padding:22px;
+    position:relative;
+}
+
+.service-info h3{
+    font-size:24px;
+    color:#222;
+    margin-bottom:12px;
+    font-family:Georgia, serif;
+}
+
+.service-info p{
+    color:#666;
+    font-size:15px;
+    line-height:26px;
+    margin-bottom:25px;
+}
+
+.service-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#234734;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.service-btn:hover{
+    background:#B8860B;
+    transform:rotate(-45deg);
+}
+
+/* Floating Button */
+
+.service-btn{
+    position:absolute;
+    top:-24px;
+    right:22px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+@media(max-width:768px){
+
+.service-image{
+    height:180px;
+}
+
+.service-info h3{
+    font-size:20px;
+}
+
+}

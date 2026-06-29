@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    scroll-margin-top:90px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    width:100%;
+    height:80px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+/* ================= LOGO ================= */
+
+.logo h2{
+    font-size:32px;
+    color:#234734;
+    font-family:Georgia,serif;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.logo h2:hover{
+    color:#B8860B;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-menu a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#B8860B;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#B8860B;
+    transition:.3s;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+/* ================= RIGHT ================= */
+
+.right-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* ================= PROFILE ================= */
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.profile-btn{
+    font-size:36px;
+    color:#234734;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.profile-btn:hover{
+    color:#B8860B;
+    transform:scale(1.1);
+}
+
+/* ================= BUTTONS ================= */
+
+.signin-btn,
+.mobile-login,
+.logout-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-decoration:none;
+    background:#234734;
+    color:#fff;
+    border:none;
+    padding:10px 22px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signin-btn:hover,
+.mobile-login:hover,
+.logout-btn:hover{
+    background:#B8860B;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.signin-btn svg,
+.mobile-login svg,
+.logout-btn svg{
+    font-size:16px;
+}
+
+/* Hide Mobile Login on Desktop */
+
+.mobile-login{
+    display:none;
+}
+
+/* ================= MENU BUTTON ================= */
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:#234734;
+    font-size:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu-btn:hover{
+    color:#B8860B;
+}
+
+/* ================================================= */
+/* =================== RESPONSIVE ================== */
+/* ================================================= */
+
+@media (max-width:900px){
+
+.navbar{
+    padding:0 20px;
+}
+
+.logo h2{
+    font-size:26px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.nav-menu{
+    position:fixed;
+    top:80px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 80px);
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    gap:30px;
+    padding-top:45px;
+    transition:.35s;
+    z-index:999;
+}
+
+.nav-menu.active{
+    left:0;
+}
+
+.nav-menu a{
+    font-size:20px;
+}
+
+/* Desktop Sign In Hidden */
+
+.signin-btn{
+    display:none;
+}
+
+/* Mobile Sign In */
+
+.mobile-login{
+    display:flex;
+    width:190px;
+    padding:13px;
+    border-radius:30px;
+    color:#fff !important;
+}
+
+.mobile-login:hover{
+    color:#fff !important;
+}
+
+/* Hide Logout on Mobile */
+
+.logout-btn{
+    display:none;
+}
+
+/* Only Profile Icon */
+
+.profile{
+    gap:0;
+}
+
+.profile-btn{
+    font-size:34px;
+}
+
+}
+
+/* ================= SMALL DEVICES ================= */
+
+@media (max-width:500px){
+
+.navbar{
+    padding:0 15px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.menu-btn{
+    font-size:28px;
+}
+
+.nav-menu{
+    gap:25px;
+}
+
+.nav-menu a{
+    font-size:18px;
+}
+
+.mobile-login{
+    width:170px;
+    font-size:15px;
+    padding:12px;
+}
+
+.profile-btn{
+    font-size:32px;
+}
+
+}

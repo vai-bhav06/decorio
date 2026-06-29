@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f2ec;
+    padding: 40px;
+}
+
+/* MAIN CONTAINER */
+.login-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* LEFT SIDE */
+.login-left {
+    background: linear-gradient(
+        rgba(35, 71, 52, 0.82),
+        rgba(35, 71, 52, 0.82)
+    ),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px;
+    text-align: center;
+}
+
+.login-left h1 {
+    font-size: 44px;
+    font-family: Georgia, serif;
+    margin-bottom: 18px;
+}
+
+.login-left p {
+    font-size: 17px;
+    line-height: 30px;
+    max-width: 380px;
+    color: #eee;
+}
+
+.login-left button {
+    margin-top: 30px;
+    padding: 14px 32px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-left button:hover {
+    background: #fff;
+    color: #234734;
+}
+
+/* RIGHT SIDE */
+.login-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-card h2 {
+    font-size: 36px;
+    color: #234734;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* INPUT BOX */
+.input-box {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-box svg {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px 14px 14px 48px;
+    border: 1px solid #ddd;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.input-box input:focus {
+    border-color: #234734;
+    box-shadow: 0 0 0 3px rgba(35, 71, 52, 0.12);
+}
+
+/* OPTIONS */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.login-options a {
+    text-decoration: none;
+    color: #234734;
+    transition: 0.3s;
+}
+
+.login-options a:hover {
+    color: #b8860b;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #234734;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #1b3527;
+    transform: translateY(-1px);
+}
+
+/* DIVIDER */
+.divider {
+    text-align: center;
+    margin: 28px 0;
+    color: #999;
+    position: relative;
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 38%;
+    height: 1px;
+    background: #ddd;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* GOOGLE BUTTON */
+.google-btn {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+    background: #f3f3f3;
+    transform: translateY(-1px);
+}
+
+/* SIGNUP LINK */
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #234734;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    color: #b8860b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-page {
+        padding: 15px;
+    }
+
+    .login-card h2 {
+        font-size: 28px;
+    }
+
+    .login-btn,
+    .google-btn {
+        padding: 13px;
+    }
+}
