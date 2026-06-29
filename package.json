@@ -2,14 +2,14 @@
   "name": "interior-design-app",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://vai-bhav06.github.io/decorio",
+  "homepage": "https://vai-bhav06.github.io/decorio",
   "type": "module",
   "scripts": {
-     "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",
